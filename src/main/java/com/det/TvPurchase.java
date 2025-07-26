@@ -14,15 +14,13 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-
-
-public class FlipkartProduct {
+public class TvPurchase {
 	  static long start;
 	  static WebDriver driver ;
 	  static String text;
 	  static String text2;
 	   @BeforeClass
-       public static void browserla() {
+     public static void browserla() {
 		    System.setProperty("webdriver.chrome.driver","D:\\Selenium\\chromedriver-win64\\chromedriver.exe");
 		    driver = new ChromeDriver(); 
 		    driver.get("https://www.flipkart.com/");
@@ -57,7 +55,7 @@ public class FlipkartProduct {
 		 WebElement ProductName = driver.findElement(By.xpath("//div[text()='Nothing Phone (3a) (White, 128 GB)']"));
 		 text= ProductName.getText();
 		 System.out.println(text);
-     }
+   }
 	 @Test
 	 public void method3() {
 		 String pwin = driver.getWindowHandle();
@@ -76,7 +74,7 @@ public class FlipkartProduct {
 		 if (text.equals(text2)){
 			 System.out.println("Text Mtached");		
 	        }else {
-	         System.out.println("Text MissMtach"); 
+	         System.out.println("Text MissMtach");
 	        }
 	 }
 	 @Ignore
